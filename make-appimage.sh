@@ -20,7 +20,9 @@ quick-sharun \
 	/usr/bin/zenity                 \
 	/usr/lib/libgtk-3.so*           \
 	/usr/lib/libtcl8.6.so*          \
-	/usr/lib/libtk8.6.so
+	/usr/lib/libtk8.6.so            \
+	/usr/lib/tcl8.6                 \
+	/usr/lib/tk8.6
 
 sed -i -e 's|/usr/share|"$APPDIR"/share|g' ./AppDir/bin/amethyst-mod-manager
 
