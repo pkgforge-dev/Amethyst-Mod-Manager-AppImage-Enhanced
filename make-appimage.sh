@@ -13,6 +13,10 @@ export DESKTOP=/usr/share/applications/io.github.Amethyst.ModManager.desktop
 export DEPLOY_PYTHON=1
 export ALWAYS_SOFTWARE=1
 
+# there is a lot of .py files in /usr/share/amethyst-mod-manager that incorrectly
+# have the executable bit, this causes quick-sharun to take forever to deploy
+find /usr/share/amethyst-mod-manager/*/* -type f -exec chmod -x {} \;
+
 # Deploy dependencies
 quick-sharun \
 	/usr/bin/amethyst-mod-manager   \
